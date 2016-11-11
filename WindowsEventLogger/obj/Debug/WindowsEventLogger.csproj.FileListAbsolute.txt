@@ -1,0 +1,8 @@
+c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\WindowsEventLogger\obj\Debug\WindowsEventLogger.csprojResolveAssemblyReference.cache
+c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\WindowsEventLogger\bin\Debug\WindowsEventLogger.exe.config
+c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\WindowsEventLogger\bin\Debug\WindowsEventLogger.exe
+c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\WindowsEventLogger\bin\Debug\WindowsEventLogger.pdb
+c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\WindowsEventLogger\bin\Debug\EventLogListener.dll
+c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\WindowsEventLogger\bin\Debug\EventLogListener.pdb
+c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\WindowsEventLogger\obj\Debug\WindowsEventLogger.exe
+c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\WindowsEventLogger\obj\Debug\WindowsEventLogger.pdb

@@ -1,0 +1,5 @@
+c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\EventLogListener\bin\Debug\EventLogListener.dll
+c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\EventLogListener\bin\Debug\EventLogListener.pdb
+c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\EventLogListener\obj\Debug\EventLogListener.dll
+c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\EventLogListener\obj\Debug\EventLogListener.pdb
+C:\Users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\EventLogListener\obj\Debug\EventLogListeners.csprojResolveAssemblyReference.cache
