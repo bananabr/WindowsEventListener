@@ -1,0 +1,4 @@
+C:\Users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\EventLogListener\bin\Debug\EventLogListener.dll
+C:\Users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\EventLogListener\bin\Debug\EventLogListener.pdb
+C:\Users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\EventLogListener\obj\Debug\EventLogListener.dll
+C:\Users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\EventLogListener\obj\Debug\EventLogListener.pdb

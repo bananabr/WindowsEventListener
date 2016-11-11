@@ -49,13 +49,13 @@ namespace WindowsEventLogger.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Setting {
+        [global::System.Configuration.DefaultSettingValueAttribute("4624")]
+        public string EventCodesToWatch {
             get {
-                return ((string)(this["Setting"]));
+                return ((string)(this["EventCodesToWatch"]));
             }
             set {
-                this["Setting"] = value;
+                this["EventCodesToWatch"] = value;
             }
         }
     }

@@ -4,6 +4,7 @@ using EventLogListener.Filters.Strategies;
 using EventLogListener.Handlers;
 using EventLogListener.Loggers;
 using System;
+using System.Collections.Generic;
 using System.Reflection;
 using System.Threading;
 
@@ -12,6 +13,8 @@ namespace WindowsEventLogger
     class Program
     {
         static ManualResetEvent _quitEvent = new ManualResetEvent(false);
+        private static IEventFilterStrategy filterStrategy;
+        private static List<long> validLogonEvents = new List<long>();
 
         static void Main(string[] args)
         {
@@ -20,11 +23,14 @@ namespace WindowsEventLogger
                 eArgs.Cancel = true;
             };
 
-            long[] validLogonEvents = new long[1] { 4624 };
+            foreach (var code in Properties.Settings.Default["EventCodesToWatch"].ToString().Split(','))
+            {
+                validLogonEvents.Add(long.Parse(code));
+            }
 
             PipeLineEventLogHandler handler = new PipeLineEventLogHandler();
             IEventLogger consoleLogger = new ConsoleEventEntryPropertyLogger("Message");
-            IEventFilterStrategy filterStrategy = Assembly.Load(@"EventLogListener").CreateInstance(
+            filterStrategy = Assembly.Load(@"EventLogListener").CreateInstance(
                 string.Format(@"EventLogListener.Filters.Strategies.{0}", Properties.Settings.Default["FilterStrategy"].ToString())
                 ) as IEventFilterStrategy;
             IEventFilter idFilter = new EventCodeFilter(validLogonEvents);

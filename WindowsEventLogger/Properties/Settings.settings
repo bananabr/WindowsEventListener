@@ -8,8 +8,8 @@
     <Setting Name="LogName" Type="System.String" Scope="User">
       <Value Profile="(Default)">Security</Value>
     </Setting>
-    <Setting Name="Setting" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="EventCodesToWatch" Type="System.String" Scope="User">
+      <Value Profile="(Default)">4624</Value>
     </Setting>
   </Settings>
 </SettingsFile>
