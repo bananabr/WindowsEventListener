@@ -25,18 +25,6 @@ namespace WindowsEventLogger.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("AllMustMatch")]
-        public string FilterStrategy {
-            get {
-                return ((string)(this["FilterStrategy"]));
-            }
-            set {
-                this["FilterStrategy"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Security")]
         public string LogName {
             get {

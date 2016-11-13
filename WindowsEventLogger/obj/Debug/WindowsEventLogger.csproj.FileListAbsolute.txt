@@ -6,3 +6,13 @@ c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\W
 c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\WindowsEventLogger\bin\Debug\EventLogListener.pdb
 c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\WindowsEventLogger\obj\Debug\WindowsEventLogger.exe
 c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\WindowsEventLogger\obj\Debug\WindowsEventLogger.pdb
+C:\Users\Daniel\Source\Repos\WindowsEventListener\WindowsEventLogger\bin\Debug\WindowsEventLogger.exe.config
+C:\Users\Daniel\Source\Repos\WindowsEventListener\WindowsEventLogger\obj\Debug\WindowsEventLogger.exe
+C:\Users\Daniel\Source\Repos\WindowsEventListener\WindowsEventLogger\obj\Debug\WindowsEventLogger.pdb
+C:\Users\Daniel\Source\Repos\WindowsEventListener\WindowsEventLogger\bin\Debug\WindowsEventLogger.exe
+C:\Users\Daniel\Source\Repos\WindowsEventListener\WindowsEventLogger\bin\Debug\WindowsEventLogger.pdb
+C:\Users\Daniel\Source\Repos\WindowsEventListener\WindowsEventLogger\bin\Debug\EventLogListener.dll
+C:\Users\Daniel\Source\Repos\WindowsEventListener\WindowsEventLogger\bin\Debug\EventLogListener.pdb
+C:\Users\Daniel\Source\Repos\WindowsEventListener\WindowsEventLogger\obj\Debug\WindowsEventLogger.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Source\Repos\WindowsEventListener\WindowsEventLogger\bin\Debug\LoggingUtils.dll
+C:\Users\Daniel\Source\Repos\WindowsEventListener\WindowsEventLogger\bin\Debug\LoggingUtils.pdb

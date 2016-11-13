@@ -39,9 +39,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +59,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Documents\Visual Studio 2015\Projects\Contoso University\LoggingUtils\LoggingUtils.csproj">
+      <Project>{07929748-31ba-4b77-aea1-cecc4daad93e}</Project>
+      <Name>LoggingUtils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EventLogListener\EventLogListeners.csproj">
       <Project>{007dd871-75c8-4293-95d7-a25e9174dd77}</Project>
       <Name>EventLogListeners</Name>

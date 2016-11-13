@@ -3,3 +3,8 @@ c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\E
 c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\EventLogListener\obj\Debug\EventLogListener.dll
 c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\EventLogListener\obj\Debug\EventLogListener.pdb
 C:\Users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\EventLogListener\obj\Debug\EventLogListeners.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\bin\Debug\EventLogListener.dll
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\bin\Debug\EventLogListener.pdb
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\obj\Debug\EventLogListeners.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\obj\Debug\EventLogListener.dll
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\obj\Debug\EventLogListener.pdb
