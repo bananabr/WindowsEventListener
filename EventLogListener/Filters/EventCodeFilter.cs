@@ -8,9 +8,8 @@ namespace EventLogListener.Filters
 {
     public class EventCodeFilter : IEventFilter
     {
-        public List<long> ValidCodes { get; set; }
+        List<long> ValidCodes { get; set; }
 
-        public EventCodeFilter(){}
         public EventCodeFilter(IEnumerable<long> codes)
         {
             ValidCodes = new List<long>(codes);

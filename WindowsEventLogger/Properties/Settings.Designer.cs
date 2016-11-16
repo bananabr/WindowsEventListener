@@ -25,25 +25,37 @@ namespace WindowsEventLogger.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Security")]
-        public string LogName {
+        [global::System.Configuration.DefaultSettingValueAttribute("10.0.0.101")]
+        public string RedisServers {
             get {
-                return ((string)(this["LogName"]));
+                return ((string)(this["RedisServers"]));
             }
             set {
-                this["LogName"] = value;
+                this["RedisServers"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("4624")]
-        public string EventCodesToWatch {
+        [global::System.Configuration.DefaultSettingValueAttribute("Microsoft")]
+        public string WindowsDomainRegex {
             get {
-                return ((string)(this["EventCodesToWatch"]));
+                return ((string)(this["WindowsDomainRegex"]));
             }
             set {
-                this["EventCodesToWatch"] = value;
+                this["WindowsDomainRegex"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("600")]
+        public int RedisTTL {
+            get {
+                return ((int)(this["RedisTTL"]));
+            }
+            set {
+                this["RedisTTL"] = value;
             }
         }
     }

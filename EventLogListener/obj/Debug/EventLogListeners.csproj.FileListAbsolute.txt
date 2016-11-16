@@ -3,8 +3,26 @@ c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\E
 c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\EventLogListener\obj\Debug\EventLogListener.dll
 c:\users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\EventLogListener\obj\Debug\EventLogListener.pdb
 C:\Users\danielb.santos\documents\visual studio 2015\Projects\EventLogListener\EventLogListener\obj\Debug\EventLogListeners.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\bin\Debug\EventLogListener.dll.config
 C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\bin\Debug\EventLogListener.dll
 C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\bin\Debug\EventLogListener.pdb
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\bin\Debug\LoggingUtils.dll
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\bin\Debug\StackExchange.Redis.dll
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\bin\Debug\System.IO.dll
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\bin\Debug\System.Runtime.dll
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\bin\Debug\System.Threading.Tasks.dll
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\bin\Debug\LoggingUtils.pdb
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\bin\Debug\StackExchange.Redis.xml
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\bin\Debug\System.IO.xml
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\bin\Debug\System.Runtime.xml
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\bin\Debug\System.Threading.Tasks.xml
+C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\obj\Debug\EventLogListeners.csproj.App.config
 C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\obj\Debug\EventLogListeners.csprojResolveAssemblyReference.cache
 C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\obj\Debug\EventLogListener.dll
 C:\Users\Daniel\Source\Repos\WindowsEventListener\EventLogListener\obj\Debug\EventLogListener.pdb

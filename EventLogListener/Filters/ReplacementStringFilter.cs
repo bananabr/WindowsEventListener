@@ -3,30 +3,29 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace EventLogListener.Filters
 {
     public class ReplacementStringFilter : IEventFilter
     {
-        public  Dictionary<int,string> ValidStrings { get; set; }
+        public  Dictionary<int,Regex> _validStrings { get; set; }
 
-        public ReplacementStringFilter(){}
-        public ReplacementStringFilter(Dictionary<int, string> strings)
+        public ReplacementStringFilter(Dictionary<int, string> strings, bool ignore_case=true)
         {
-            ValidStrings = strings;
+            RegexOptions ignoreCase = ignore_case ? RegexOptions.IgnoreCase : RegexOptions.None;
+            _validStrings = new Dictionary<int, Regex>();
+            foreach (var item in strings)
+            {
+                _validStrings.Add(item.Key, new Regex(item.Value, ignoreCase));
+            }
         }
+
         public EntryWrittenEventArgs Filter(EntryWrittenEventArgs e)
         {
-            foreach (var str in ValidStrings)
+            foreach (var str in _validStrings)
             {
-                try
-                {
-                    if(e.Entry.ReplacementStrings[str.Key] != str.Value)
-                    {
-                        return null;
-                    }
-                }
-                catch (Exception)
+                if(!str.Value.IsMatch(e.Entry.ReplacementStrings[str.Key]))
                 {
                     return null;
                 }

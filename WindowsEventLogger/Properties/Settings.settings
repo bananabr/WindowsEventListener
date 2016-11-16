@@ -2,11 +2,14 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WindowsEventLogger.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="LogName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Security</Value>
+    <Setting Name="RedisServers" Type="System.String" Scope="User">
+      <Value Profile="(Default)">10.0.0.101</Value>
     </Setting>
-    <Setting Name="EventCodesToWatch" Type="System.String" Scope="User">
-      <Value Profile="(Default)">4624</Value>
+    <Setting Name="WindowsDomainRegex" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Microsoft</Value>
+    </Setting>
+    <Setting Name="RedisTTL" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">600</Value>
     </Setting>
   </Settings>
 </SettingsFile>

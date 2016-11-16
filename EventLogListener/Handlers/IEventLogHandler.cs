@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EventLogListener.Loggers;
+using LoggingUtils;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
