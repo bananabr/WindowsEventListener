@@ -1,0 +1,5 @@
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\Contoso University\LoggingUtils\bin\Debug\LoggingUtils.dll
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\Contoso University\LoggingUtils\bin\Debug\LoggingUtils.pdb
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\Contoso University\LoggingUtils\obj\Debug\LoggingUtils.dll
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\Contoso University\LoggingUtils\obj\Debug\LoggingUtils.pdb
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\Contoso University\LoggingUtils\obj\Debug\LoggingUtils.csprojResolveAssemblyReference.cache

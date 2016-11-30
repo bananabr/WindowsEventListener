@@ -105,10 +105,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Documents\Visual Studio 2015\Projects\Contoso University\LoggingUtils\LoggingUtils.csproj">
-      <Project>{07929748-31ba-4b77-aea1-cecc4daad93e}</Project>
-      <Name>LoggingUtils</Name>
-    </ProjectReference>
     <ProjectReference Include="..\EventLogListener\EventLogListeners.csproj">
       <Project>{007dd871-75c8-4293-95d7-a25e9174dd77}</Project>
       <Name>EventLogListeners</Name>
@@ -116,6 +112,10 @@
     <ProjectReference Include="..\ip2userLib\ip2userLib.csproj">
       <Project>{ee0e36da-727f-496e-b5bd-60d3b1ddc7f3}</Project>
       <Name>ip2userLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LoggingUtils\LoggingUtils.csproj">
+      <Project>{07929748-31ba-4b77-aea1-cecc4daad93e}</Project>
+      <Name>LoggingUtils</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -77,10 +77,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Documents\Visual Studio 2015\Projects\Contoso University\LoggingUtils\LoggingUtils.csproj">
-      <Project>{07929748-31BA-4B77-AEA1-CECC4DAAD93E}</Project>
-      <Name>LoggingUtils</Name>
-    </ProjectReference>
     <ProjectReference Include="..\EventLogListener\EventLogListeners.csproj">
       <Project>{007DD871-75C8-4293-95D7-A25E9174DD77}</Project>
       <Name>EventLogListeners</Name>
@@ -88,6 +84,10 @@
     <ProjectReference Include="..\ip2userLib\ip2userLib.csproj">
       <Project>{EE0E36DA-727F-496E-B5BD-60D3B1DDC7F3}</Project>
       <Name>ip2userLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LoggingUtils\LoggingUtils.csproj">
+      <Project>{07929748-31ba-4b77-aea1-cecc4daad93e}</Project>
+      <Name>LoggingUtils</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

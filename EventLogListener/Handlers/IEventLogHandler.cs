@@ -1,10 +1,4 @@
-﻿using EventLogListener.Loggers;
-using LoggingUtils;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
+﻿using System.Diagnostics;
 using System.Threading;
 
 namespace EventLogListener

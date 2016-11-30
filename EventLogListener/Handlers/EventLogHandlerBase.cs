@@ -1,11 +1,5 @@
-﻿using EventLogListener.Filters.Strategies;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Threading;
-using System.Linq;
-using LoggingUtils;
-using EventLogListener.Loggers;
 
 namespace EventLogListener.Handlers
 {

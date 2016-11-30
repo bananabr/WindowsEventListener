@@ -1,0 +1,8 @@
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\Contoso University\LoggingUtils\bin\Release\LoggingUtils.dll
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\Contoso University\LoggingUtils\bin\Release\LoggingUtils.pdb
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\Contoso University\LoggingUtils\obj\Release\LoggingUtils.dll
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\Contoso University\LoggingUtils\obj\Release\LoggingUtils.pdb
+C:\Users\Daniel\Source\Repos\WindowsEventListener\LoggingUtils\bin\Release\LoggingUtils.dll
+C:\Users\Daniel\Source\Repos\WindowsEventListener\LoggingUtils\bin\Release\LoggingUtils.pdb
+C:\Users\Daniel\Source\Repos\WindowsEventListener\LoggingUtils\obj\Release\LoggingUtils.dll
+C:\Users\Daniel\Source\Repos\WindowsEventListener\LoggingUtils\obj\Release\LoggingUtils.pdb

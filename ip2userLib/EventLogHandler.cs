@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Threading;
-using LoggingUtils;
 using EventLogListener;
 using EventLogListener.Filters.Strategies;
 using EventLogListener.Handlers;
 using EventLogListener.Loggers;
+using LoggingUtils;
 
 namespace WindowsEventLogger
 {
