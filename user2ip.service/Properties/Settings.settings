@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="user2ip.service.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="RedisServers" Type="System.String" Scope="User">
+      <Value Profile="(Default)">10.0.0.30</Value>
+    </Setting>
+    <Setting Name="WindowsDomainRegex" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CONTOSO</Value>
+    </Setting>
+    <Setting Name="RedisTTL" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">28800</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

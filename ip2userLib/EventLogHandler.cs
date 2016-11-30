@@ -13,7 +13,6 @@ namespace WindowsEventLogger
     public class EventLogHandler : EventLogHandlerBase, IEventLogHandler, IEventFilterable, ILogable
     {
         // This member is used to wait for events.
-        private AutoResetEvent signal;
         private List<IEventLogger> loggers;
         private IList<IEventFilter> filters;
         private IEventFilterStrategy filterStrategy;
