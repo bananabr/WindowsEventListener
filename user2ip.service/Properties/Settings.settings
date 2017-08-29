@@ -11,5 +11,8 @@
     <Setting Name="RedisTTL" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">28800</Value>
     </Setting>
+    <Setting Name="ParseKerberosEvents" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

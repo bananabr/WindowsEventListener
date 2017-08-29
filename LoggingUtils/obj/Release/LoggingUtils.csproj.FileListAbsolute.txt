@@ -6,3 +6,8 @@ C:\Users\Daniel\Source\Repos\WindowsEventListener\LoggingUtils\bin\Release\Loggi
 C:\Users\Daniel\Source\Repos\WindowsEventListener\LoggingUtils\bin\Release\LoggingUtils.pdb
 C:\Users\Daniel\Source\Repos\WindowsEventListener\LoggingUtils\obj\Release\LoggingUtils.dll
 C:\Users\Daniel\Source\Repos\WindowsEventListener\LoggingUtils\obj\Release\LoggingUtils.pdb
+C:\Users\danielb.santos\Documents\git\WindowsEventListener\LoggingUtils\bin\Release\LoggingUtils.dll
+C:\Users\danielb.santos\Documents\git\WindowsEventListener\LoggingUtils\bin\Release\LoggingUtils.pdb
+C:\Users\danielb.santos\Documents\git\WindowsEventListener\LoggingUtils\obj\Release\LoggingUtils.csprojResolveAssemblyReference.cache
+C:\Users\danielb.santos\Documents\git\WindowsEventListener\LoggingUtils\obj\Release\LoggingUtils.dll
+C:\Users\danielb.santos\Documents\git\WindowsEventListener\LoggingUtils\obj\Release\LoggingUtils.pdb

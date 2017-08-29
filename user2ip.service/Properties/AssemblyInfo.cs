@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("user2ip.service")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Maps an IPv4 address to a username on a REDIS database parsing Authentication Events on Windows Active Directory")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("PROCEMPA")]
 [assembly: AssemblyProduct("user2ip.service")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -58,5 +58,17 @@ namespace user2ip.service.Properties {
                 this["RedisTTL"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ParseKerberosEvents {
+            get {
+                return ((bool)(this["ParseKerberosEvents"]));
+            }
+            set {
+                this["ParseKerberosEvents"] = value;
+            }
+        }
     }
 }

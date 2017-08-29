@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="EventLogHandler.cs" />
     <Compile Include="LogonEventsHandlerFactory.cs" />
+    <Compile Include="NetworkLogonEventSources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

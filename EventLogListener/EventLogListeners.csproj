@@ -88,6 +88,7 @@
     <Compile Include="Handlers\IEventLogHandler.cs" />
     <Compile Include="Loggers\ILogable.cs" />
     <Compile Include="Loggers\RedisEventLogger.cs" />
+    <Compile Include="WindowsEventCodes.cs" />
     <Compile Include="WindowsEventLogListener.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

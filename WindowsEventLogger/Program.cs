@@ -1,6 +1,7 @@
 ﻿using EventLogListener;
 using EventLogListener.Filters;
 using EventLogListener.Loggers;
+using ip2userLib;
 using LoggingUtils;
 using System;
 using System.Collections.Generic;
@@ -15,9 +16,9 @@ namespace WindowsEventLogger
         static string redisConnectionString, domain, logName;
         static int redisTTL;
         static ILogger logger = new ConsoleLogger();
-        static EventLogHandler handler;
-        static int remote_network_address_index;
-        static int username_index;
+        static EventLogHandler kerberosEventsHandler;
+        //static EventLogHandler handler;
+        static int remote_network_address_index, krb_client_addr_index, username_index;
 
         static void Init()
         {
@@ -26,7 +27,6 @@ namespace WindowsEventLogger
             domain = Properties.Settings.Default["WindowsDomainRegex"].ToString();
             int.TryParse(Properties.Settings.Default["RedisTTL"].ToString(),out redisTTL);
             var os_version = Environment.OSVersion.Version;
-            handler = NetworkLogonEventsHandlerFactory.Build(os_version.Major,domain);
             IEventLogger consoleLogger = new ConsoleReplacementStringsLogger();
             if (os_version.Major > 5)
             {
@@ -36,14 +36,24 @@ namespace WindowsEventLogger
             else
             {
                 remote_network_address_index = 13;
+                krb_client_addr_index = 6;
                 username_index = 0;
             }
-            IEventLogger redisLogger = new RedisEventLogger(redisConnectionString, remote_network_address_index, username_index, false, redisTTL);
-            IEventFilter usernameFilter = new NOT_EventFilter(new ReplacementStringFilter(new Dictionary<int, string>() { { username_index, @"^.*\$$" } }));
+            //IEventLogger redisLogger = new RedisEventLogger(redisConnectionString, remote_network_address_index, username_index, false, redisTTL);
+            IEventFilter usernameFilter = new NOT_EventFilter(new ReplacementStringFilter(new Dictionary<int, string>() { { username_index, @"^.*\$.*$" } }));
+
+            /*handler = NetworkLogonEventsHandlerFactory.Build(os_version.Major, domain);
             handler.RegisterFilter(usernameFilter);
             handler.RegisterLogger(consoleLogger);
             handler.RegisterLogger(redisLogger);
-            handler.SetExceptionLogger(logger);
+            handler.SetExceptionLogger(logger);*/
+
+
+            //Kerberos Ticket Request Event Handler
+            kerberosEventsHandler = NetworkLogonEventsHandlerFactory.Build(os_version.Major, domain, NetworkLogonEventSources.KERBEROS);
+            kerberosEventsHandler.RegisterFilter(usernameFilter);
+            kerberosEventsHandler.RegisterLogger(consoleLogger);
+
         }
 
         static void Main(string[] args)
@@ -58,7 +68,7 @@ namespace WindowsEventLogger
                 Console.WriteLine(String.Format(@"Identified OS version is {0}.", Environment.OSVersion.VersionString));
                 Init();
                 Console.WriteLine(@"Finished loading configuration.");
-                WindowsEventLogListener listener = new WindowsEventLogListener(logName, handler);
+                WindowsEventLogListener listener = new WindowsEventLogListener(logName, kerberosEventsHandler);
                 Console.WriteLine(@"Listenning to events ...");
             }
             catch (SecurityException)
