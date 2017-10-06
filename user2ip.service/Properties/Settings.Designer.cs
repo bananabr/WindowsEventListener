@@ -70,5 +70,17 @@ namespace user2ip.service.Properties {
                 this["ParseKerberosEvents"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("^.*\\$")]
+        public string UsernameFilterRegex {
+            get {
+                return ((string)(this["UsernameFilterRegex"]));
+            }
+            set {
+                this["UsernameFilterRegex"] = value;
+            }
+        }
     }
 }

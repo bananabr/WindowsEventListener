@@ -87,7 +87,9 @@
     <Compile Include="Filters\IEventFilter.cs" />
     <Compile Include="Handlers\IEventLogHandler.cs" />
     <Compile Include="Loggers\ILogable.cs" />
-    <Compile Include="Loggers\RedisEventLogger.cs" />
+    <Compile Include="Loggers\RedisEventLoggerBase.cs" />
+    <Compile Include="Loggers\RedisTimeStampLogger.cs" />
+    <Compile Include="Loggers\RedisReplacementStringLogger.cs" />
     <Compile Include="WindowsEventCodes.cs" />
     <Compile Include="WindowsEventLogListener.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

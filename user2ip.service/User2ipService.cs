@@ -14,13 +14,15 @@ namespace user2ip.service
     public partial class User2ipService : ServiceBase
     {
         string redisConnectionString,
-            domain;
+            domain,
+            usernameFilterRegex;
         EventLogHandler logonEventsHandler,
             kerberosEventsHandler;
         int redisTTL,
             remote_network_address_index,
             remote_network_address_tgt_index,
             remote_network_address_ticket_index,
+            logon_ev_code,
             krb_tgt_granted_ev_code,
             krb_service_ticket_granted_ev_code,
             username_index;
@@ -33,11 +35,11 @@ namespace user2ip.service
         {
             redisConnectionString = Properties.Settings.Default["RedisServers"].ToString();
             domain = Properties.Settings.Default["WindowsDomainRegex"].ToString();
+            usernameFilterRegex = Properties.Settings.Default["UsernameFilterRegex"].ToString();
             parseKerberosEvents = Properties.Settings.Default["ParseKerberosEvents"].ToString().ToUpper() == "TRUE";
             int.TryParse(Properties.Settings.Default["RedisTTL"].ToString(), out redisTTL);
             var os_version = Environment.OSVersion.Version;
 
-            //IEventLogger consoleLogger = new ConsoleReplacementStringsLogger();
             if (os_version.Major > 5)
             {
                 if(parseKerberosEvents)
@@ -51,21 +53,34 @@ namespace user2ip.service
                 remote_network_address_index = 13;
                 remote_network_address_ticket_index = 6;
                 remote_network_address_tgt_index = 9;
+                logon_ev_code = (int)EventLogListener.WindowsEventCodes.WIN2K3_LOGON_NETWORK;
                 krb_tgt_granted_ev_code = (int)EventLogListener.WindowsEventCodes.WIN2K3_KRB_TGT_GRANTED;
                 krb_service_ticket_granted_ev_code = (int)EventLogListener.WindowsEventCodes.WIN2K3_KRB_SERVICE_TICKET_GRANTED;
             }
-            // Exclude machine accounts
-            IEventFilter usernameFilter = new NOT_EventFilter(new ReplacementStringFilter(new Dictionary<int, string>() { { username_index, @"^.*\$$" } }));
 
             //Account Logon Event Handler
             logonEventsHandler = NetworkLogonEventsHandlerFactory.Build(os_version.Major, domain);
+
+            //FILTERS
+            IEventFilter logon_event_codes_filter = new EventCodeFilter(new long[] { logon_ev_code });
+            IEventFilter usernameFilter = new NOT_EventFilter(new ReplacementStringFilter(new Dictionary<int, string>() { { username_index, @"^.*\$" } })); // Exclude machine accounts
             logonEventsHandler.RegisterFilter(usernameFilter);
-            //logonEventsHandler.RegisterLogger(consoleLogger);
+
+            //LOGGERS
             logonEventsHandler.RegisterLogger(
-                new RedisEventLogger(
+                new RedisReplacementStringLogger(
                     redisConnectionString,
                     remote_network_address_index,
                     username_index,
+                    0,
+                    true,
+                    redisTTL
+                )
+            );
+            logonEventsHandler.RegisterLogger(
+                new RedisTimeStampLogger(
+                    redisConnectionString,
+                    new int[] { username_index, remote_network_address_index },
                     0,
                     true,
                     redisTTL
@@ -75,10 +90,15 @@ namespace user2ip.service
 
             //Kerberos Ticket Request Event Handler
             kerberosEventsHandler = NetworkLogonEventsHandlerFactory.Build(os_version.Major, domain, ip2userLib.NetworkLogonEventSources.KERBEROS);
+
+            //FILTERS
+            IEventFilter krb_event_codes_filter = new EventCodeFilter(new long[] { krb_service_ticket_granted_ev_code, krb_tgt_granted_ev_code });
+            kerberosEventsHandler.RegisterFilter(krb_event_codes_filter);
             kerberosEventsHandler.RegisterFilter(usernameFilter);
-            //kerberosEventsHandler.RegisterLogger(consoleLogger);
+
+            //LOGGERS
             kerberosEventsHandler.RegisterLogger(
-                new RedisEventLogger(
+                new RedisReplacementStringLogger(
                     redisConnectionString,
                     remote_network_address_ticket_index,
                     username_index,
@@ -88,7 +108,7 @@ namespace user2ip.service
                 )
             );
             kerberosEventsHandler.RegisterLogger(
-                new RedisEventLogger(
+                new RedisReplacementStringLogger(
                     redisConnectionString,
                     remote_network_address_tgt_index,
                     username_index,

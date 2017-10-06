@@ -46,3 +46,4 @@ C:\Users\danielb.santos\Documents\git\WindowsEventListener\EventLogListener\bin\
 C:\Users\danielb.santos\Documents\git\WindowsEventListener\EventLogListener\obj\Debug\EventLogListeners.csproj.App.config
 C:\Users\danielb.santos\Documents\git\WindowsEventListener\EventLogListener\obj\Debug\EventLogListener.dll
 C:\Users\danielb.santos\Documents\git\WindowsEventListener\EventLogListener\obj\Debug\EventLogListener.pdb
+C:\Users\danielb.santos\Documents\git\WindowsEventListener\EventLogListener\obj\Debug\EventLogListeners.csprojResolveAssemblyReference.cache

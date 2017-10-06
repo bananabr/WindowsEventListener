@@ -6,14 +6,10 @@ using System.IO;
 
 namespace EventLogListener.Loggers
 {
-    public class RedisEventLogger:IEventLogger
+    public class RedisReplacementStringLogger:RedisEventLoggerBase
     {
-        private ConnectionMultiplexer _redis;
         private int _keyIndex;
         private int _valueIndex;
-        private bool _async;
-        private int? _expiration;
-        private int _eventId;
 
         /// <summary>
         /// This logger will will set key(keyReplacementStringIndex) as value(valueReplacementStringIndex)
@@ -25,23 +21,14 @@ namespace EventLogListener.Loggers
         /// <param name="async">do not wait for REDIS confirmation of SET operation</param>
         /// <param name="expiration">REDIS key x value pair expiration in seconds</param>
         /// <returns>RedisEventLogger instance</returns>
-        public RedisEventLogger(string redisConnectionString, int keyReplacementStringIndex, int valueReplacementStringIndex, int evt_id = 0, bool async = true, int? expiration = null)
+        public RedisReplacementStringLogger(string redisConnectionString, int keyReplacementStringIndex, int valueReplacementStringIndex, int evt_id = 0, bool async = true, int? expiration = null) : base(redisConnectionString, async, expiration)
         {
-            ConfigurationOptions config = ConfigurationOptions.Parse(redisConnectionString);
-            config.AbortOnConnectFail = false;
-            config.AllowAdmin = false;
-            config.ConnectRetry = 3;
-            config.KeepAlive = 180;
-            StringWriter sw = new StringWriter();
-            _redis = ConnectionMultiplexer.Connect(config,sw);
             _keyIndex = keyReplacementStringIndex;
             _valueIndex = valueReplacementStringIndex;
-            _expiration = expiration;
-            _async = async;
             _eventId = evt_id;
         }
 
-        public void log(EntryWrittenEventArgs e)
+        public override void log(EntryWrittenEventArgs e)
         {
             if (_eventId <= 0 || e.Entry.InstanceId == _eventId)
             {

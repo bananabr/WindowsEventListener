@@ -7,3 +7,4 @@ C:\Users\danielb.santos\Documents\git\WindowsEventListener\LoggingUtils\bin\Debu
 C:\Users\danielb.santos\Documents\git\WindowsEventListener\LoggingUtils\bin\Debug\LoggingUtils.pdb
 C:\Users\danielb.santos\Documents\git\WindowsEventListener\LoggingUtils\obj\Debug\LoggingUtils.dll
 C:\Users\danielb.santos\Documents\git\WindowsEventListener\LoggingUtils\obj\Debug\LoggingUtils.pdb
+C:\Users\danielb.santos\Documents\git\WindowsEventListener\LoggingUtils\obj\Debug\LoggingUtils.csprojResolveAssemblyReference.cache
